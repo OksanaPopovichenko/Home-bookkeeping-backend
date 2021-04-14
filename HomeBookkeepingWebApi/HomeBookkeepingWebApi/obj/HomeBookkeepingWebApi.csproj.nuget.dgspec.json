@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {}
+    "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {
+    "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
         "projectName": "HomeBookkeepingWebApi",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.13, )"
@@ -62,6 +66,14 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.2, )"
             }
           },
           "imports": [
