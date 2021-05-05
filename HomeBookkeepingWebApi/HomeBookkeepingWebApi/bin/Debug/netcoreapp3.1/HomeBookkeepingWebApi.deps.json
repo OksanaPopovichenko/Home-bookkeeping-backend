@@ -32,9 +32,12 @@
       "HomeBookkeepingWebApi/1.0.0": {
         "dependencies": {
           "EntityFramework": "6.4.4",
+          "HomeBookkeepingWebApi.BLL": "1.0.0",
+          "HomeBookkeepingWebApi.DAL": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.13",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.13",
           "Microsoft.AspNetCore.Identity.UI": "3.1.13",
+          "Microsoft.EntityFrameworkCore": "3.1.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.13",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.13",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
@@ -2484,6 +2487,27 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "HomeBookkeepingWebApi.BLL/1.0.0": {
+        "runtime": {
+          "HomeBookkeepingWebApi.BLL.dll": {}
+        },
+        "compile": {
+          "HomeBookkeepingWebApi.BLL.dll": {}
+        }
+      },
+      "HomeBookkeepingWebApi.DAL/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "Microsoft.EntityFrameworkCore": "3.1.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.13"
+        },
+        "runtime": {
+          "HomeBookkeepingWebApi.DAL.dll": {}
+        },
+        "compile": {
+          "HomeBookkeepingWebApi.DAL.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5331,6 +5355,16 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "HomeBookkeepingWebApi.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HomeBookkeepingWebApi.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

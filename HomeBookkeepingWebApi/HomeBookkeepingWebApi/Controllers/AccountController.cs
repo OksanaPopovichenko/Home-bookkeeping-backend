@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HomeBookkeepingWebApi.Controllers
 {
-    [Route("api/account")]
+    [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -25,8 +25,8 @@ namespace HomeBookkeepingWebApi.Controllers
             this.signInManager = signInManager;
         }
 
-        [HttpPost, AllowAnonymous]
-        [Route("Register")]
+        [HttpPost("register"), AllowAnonymous]
+ 
         public async Task<IActionResult> Register(UserRegistrationDto request)
         {
             if (ModelState.IsValid)
@@ -78,29 +78,19 @@ namespace HomeBookkeepingWebApi.Controllers
             if (ModelState.IsValid)
             {
                 var user = await userManager.FindByEmailAsync(model.Email);
-                if (user != null && !user.EmailConfirmed)
-                {
-                    ModelState.AddModelError("message", "Email not confirmed yet");
-                    return Ok(model);
 
-                }
                 if (await userManager.CheckPasswordAsync(user, model.Password) == false)
                 {
-                    ModelState.AddModelError("message", "Invalid credentials");
-                    return Ok(model);
-
+                    return BadRequest("Invalid credentials");
                 }
 
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, true);
 
                 if (result.Succeeded)
                 {
-                    await userManager.AddClaimAsync(user, new Claim("UserRole", "Admin"));
-                    return BadRequest("Dashboard");
-                }
-                else if (result.IsLockedOut)
-                {
-                    return Ok("AccountLocked");
+                    var id = userManager.GetUserId(User);
+
+                    return Ok(id);
                 }
                 else
                 {

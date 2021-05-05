@@ -1,3 +1,10 @@
+using HomeBookkeepingWebApi.BLL.Services.Abstract;
+using HomeBookkeepingWebApi.BLL.Services.Concrete;
+using HomeBookkeepingWebApi.Controllers;
+using HomeBookkeepingWebApi.DAL.DataContext;
+using HomeBookkeepingWebApi.DAL.Models;
+using HomeBookkeepingWebApi.DAL.Repositories.Absctract;
+using HomeBookkeepingWebApi.DAL.Repositories.Concrete;
 using HomeBookkeepingWebApi.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,13 +34,19 @@ namespace HomeBookkeepingWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+           
             services.AddSwaggerGen();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddRazorPages();
 
             services.ConfigureApplicationCookie(options =>
@@ -42,6 +55,14 @@ namespace HomeBookkeepingWebApi
                 options.LogoutPath = $"/account/logout";
                 options.AccessDeniedPath = $"/account/accessDenied";
             });
+
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IPurchaseService, PurchaseService>();
+            services.AddTransient<IBudgetPlanService, BudgetPlanService>();
+
+            services.AddTransient<IGenericRepository<Category>, BaseGenericRepository<Category>>();
+            services.AddTransient<IGenericRepository<BudgetPlan>, BaseGenericRepository<BudgetPlan>>();
+            services.AddTransient<IGenericRepository<Purchase>, BaseGenericRepository<Purchase>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +79,7 @@ namespace HomeBookkeepingWebApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Intelligent Experience Demo | Emulation"));
             app.UseHttpsRedirection();
@@ -68,9 +90,16 @@ namespace HomeBookkeepingWebApi
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapRazorPages();
+            //});
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

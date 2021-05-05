@@ -1,0 +1,9 @@
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\bin\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.deps.json
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\bin\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.dll
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\bin\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.pdb
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\obj\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\obj\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\obj\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.AssemblyInfo.cs
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\obj\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\obj\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.dll
+C:\Users\admin\Desktop\GL\Home-bookkeeping-backend\HomeBookkeepingWebApi\HomeBookkeepingWebApi.BLL\obj\Debug\netcoreapp3.1\HomeBookkeepingWebApi.BLL.pdb

@@ -4,14 +4,75 @@
     "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {
+    "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.BLL\\HomeBookkeepingWebApi.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
-        "projectName": "HomeBookkeepingWebApi",
-        "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.BLL\\HomeBookkeepingWebApi.BLL.csproj",
+        "projectName": "HomeBookkeepingWebApi.BLL",
+        "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.BLL\\HomeBookkeepingWebApi.BLL.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj",
+        "projectName": "HomeBookkeepingWebApi.DAL",
+        "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +104,86 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
+        "projectName": "HomeBookkeepingWebApi",
+        "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.BLL\\HomeBookkeepingWebApi.BLL.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.BLL\\HomeBookkeepingWebApi.BLL.csproj"
+              },
+              "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\GL\\Home-bookkeeping-backend\\HomeBookkeepingWebApi\\HomeBookkeepingWebApi.DAL\\HomeBookkeepingWebApi.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
             "EntityFramework": {
               "target": "Package",
               "version": "[6.4.4, )"
@@ -56,6 +197,10 @@
               "version": "[3.1.13, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.13, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.13, )"
             },
