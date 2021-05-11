@@ -1,4 +1,5 @@
 ﻿using HomeBookkeepingWebApi.DAL.Models;
+using HomeBookkeepingWebApi.DAL.Models.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,5 +14,6 @@ namespace HomeBookkeepingWebApi.BLL.Services.Abstract
         Task<Purchase> Get(Guid id);
         Task<IEnumerable<Purchase>> GetAll();
         Task<Purchase> Update(Purchase category);
+        PurchasesListDto GetByDate(string userEmail, DateTime startDate, DateTime endDate);
     }
 }

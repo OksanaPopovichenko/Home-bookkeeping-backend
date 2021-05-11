@@ -44,6 +44,12 @@ namespace HomeBookkeepingWebApi.DAL.Repositories.Concrete
             return result;
         }
 
+        public IEnumerable<TEntity> GetWhere(Expression<Func<TEntity, bool>> predicate)
+        {
+            var res = _context.Set<TEntity>().Where(predicate);
+            return res;
+        }
+
         public async Task<IEnumerable<TEntity>> GetAsync(Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> includeFunc = null)

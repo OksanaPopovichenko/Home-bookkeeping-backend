@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace HomeBookkeepingWebApi.Controllers
 {
     [ApiController]
@@ -63,6 +64,13 @@ namespace HomeBookkeepingWebApi.Controllers
         public async Task<IActionResult> GetAll()
         {
             return Ok(await _purchaseService.GetAll());
+        }
+
+        [Route("api/Purchase/GetByDate")]
+        [HttpGet]
+        public IActionResult GetByDate([System.Web.Http.FromUri] string userEmail, [System.Web.Http.FromUri] DateTime startDate, [System.Web.Http.FromUri] DateTime endDate)
+        {
+            return Ok(_purchaseService.GetByDate(userEmail, startDate, endDate));
         }
 
         [Route("api/Purchase/GetById")]
